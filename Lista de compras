@@ -1,0 +1,33 @@
+// Solicita o nome do solicitante
+let nome = prompt("Digite seu nome:");
+
+// Inicializa arrays para armazenar os dados dos itens
+let precos = [];
+let quantidades = [];
+let totais = [];
+let totalPedido = 0;
+
+// Loop para capturar dados de 4 itens
+totalItens = 4;
+for (let i = 0; i < totalItens; i++) {
+    let preco = parseFloat(prompt(`Digite o preço do item ${i + 1}:`));
+    let quantidade = parseInt(prompt(`Digite a quantidade do item ${i + 1}:`));
+    let totalItem = preco * quantidade;
+    
+    // Armazena os valores
+    precos.push(preco);
+    quantidades.push(quantidade);
+    totais.push(totalItem);
+    totalPedido += totalItem;
+}
+
+// Monta a saída formatada
+let mensagem = `Nome do solicitante: ${nome}\n\n`;
+for (let i = 0; i < totalItens; i++) {
+    mensagem += `Item ${i + 1}: Preço - R$ ${precos[i].toFixed(2)}, Quantidade - ${quantidades[i]}, Total - R$ ${totais[i].toFixed(2)}\n`;
+}
+mensagem += `\nValor total do pedido: R$ ${totalPedido.toFixed(2)}`;
+
+// Exibe o resultado
+alert(mensagem);
+console.log(mensagem);
