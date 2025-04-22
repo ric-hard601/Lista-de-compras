@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Verificações Simples</title>
+</head>
+<body>
+  <script>
+    // Permissão para dirigir
+    let idade1 = prompt("Qual sua idade?");
+    let cnh = prompt("Você tem carteira de motorista? (sim ou não)");
+
+    if (idade1 >= 18 && cnh.toLowerCase() === "sim") {
+      alert("Você pode dirigir.");
+    } else {
+      alert("Você não pode dirigir.");
+    }
+
+    // Aprovação de aluno
+    let n1 = Number(prompt("Digite a nota 1:"));
+    let n2 = Number(prompt("Digite a nota 2:"));
+    let n3 = Number(prompt("Digite a nota 3:"));
+    let n4 = Number(prompt("Digite a nota 4:"));
+
+    let media = (n1 + n2 + n3 + n4) / 4;
+
+    if (media >= 7) {
+      alert("Aluno aprovado!");
+    } else {
+      alert("Aluno reprovado.");
+    }
+
+    // Aposentadoria por idade
+    let idade2 = prompt("Qual sua idade?");
+    let sexo = prompt("Qual seu sexo? (masculino ou feminino)");
+
+    if ((sexo.toLowerCase() === "feminino" && idade2 >= 60) ||
+        (sexo.toLowerCase() === "masculino" && idade2 >= 65)) {
+      alert("Você pode solicitar a aposentadoria por idade.");
+    } else {
+      alert("Você ainda não pode solicitar a aposentadoria por idade.");
+    }
+  </script>
+</body>
+</html>
